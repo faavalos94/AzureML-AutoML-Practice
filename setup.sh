@@ -6,6 +6,7 @@ RESOURCE_PROVIDER="Microsoft.MachineLearningServices"
 REGION="eastus"
 WORKSPACE_NAME="mlw-dp100-labs"
 COMPUTE_INSTANCE="ci-faavalos94"
+COMPUTE_CLUSTER="aml-cluster"
 
 # Register the Azure Machine Learning resource provider in the subscription
 echo "Register the Machine Learning resource provider:"
@@ -30,5 +31,5 @@ az ml compute create --name ${COMPUTE_CLUSTER} --size STANDARD_DS11_V2 --max-ins
 
 # Create data assets
 echo "Create training data asset:"
-az ml data create --type uri_file --name "tickets-data" --path ./data/it-ticks.csv
+az ml data create --type uri_file --name "tickets-data" --path ./Data/it-ticks.csv
 
